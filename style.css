@@ -2,8 +2,14 @@ table, form, .jumbotron {
     border-radius: 10px;
 }
 
+h1{
+    text-align: center;
+    letter-spacing: 0.2em;
+}
+
 h2 {
     text-align: center;
+    letter-spacing: 0.2em;
 }
 
 h3{
@@ -41,8 +47,10 @@ nav{
 
 .formulaire, .connexion {
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    align-content: center;
+    align-items: center;
+
 }
 
 table {
@@ -56,6 +64,7 @@ th {
 }
 
 td {
+    text-align: center;
     border: 1px solid black;
     padding: 1%;
 }

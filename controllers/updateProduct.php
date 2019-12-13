@@ -1,5 +1,5 @@
 <?php
-
+// Contrôlleur pour la modification d'un produit en BDD
 $id = (!empty($_POST['id'])) ? $_POST['id'] : '';
 $name = (!empty($_POST['nameP'])) ? $_POST['nameP'] : '';
 $date = (!empty($_POST['dateP'])) ? $_POST['dateP'] : '';

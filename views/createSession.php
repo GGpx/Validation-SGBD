@@ -1,7 +1,4 @@
 <!--Vue de la connexion à l'application web-->
-<?php
-    include 'controllers/login/sessionStart.php';
-?>
 <!doctype html>
 <html lang="fr">
 <head>
@@ -11,33 +8,29 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
           integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="../style.css">
     <title>Les Produits</title>
 </head>
 <body>
 <main style="height: 100vh">
     <div class="jumbotron jumbotron-fluid">
         <div class="container">
-            <h1 class="display-4">Bienvenue !!</h1>
+            <h1 class="display-4">Inscription</h1>
         </div>
     </div>
     <div class="connexion">
-        <form action="controllers/login/login.php" method="POST">
+        <form action="../controllers/login/createLogin.php" method="POST">
             <div class="form-group">
-                <label for="pseudoU">Pseudo :</label>
-                <input type="text" name="pseudoU" class="form-control">
+                <label for="pseudoU">Votre Pseudo :</label>
+                <input type="text" name="pseudoU" id="pseudoU" class="form-control">
             </div>
             <div class="form-group">
-                <label for="passwordU">Mot de passe :</label>
-                <input type="password" name="passwordU" class="form-control">
+                <label for="passwordU">Votre Mot de passe :</label>
+                <input type="password" name="passwordU" id="passwordU" class="form-control">
             </div>
-            <button type="submit" class="btn btn-dark btn-lg btn-block">Connexion</button>
-        </form>
-        <form action="views/createSession.php">
-            <button type="submit" class="btn btn-dark btn-lg btn-block">Inscription</button>
+            <button type="submit" id="buttonAddSession" onclick="addSession()" class="btn btn-dark btn-lg btn-block">Valider</button>
         </form>
     </div>
-    <a href="#" class="buttonMagique" onclick="buttonHelp()"><p class='pButtonMagique'>CLIQUE ICI !!</p></a>
 </main>
 </body>
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
@@ -50,12 +43,14 @@
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
         crossorigin="anonymous"></script>
 <script>
-let button = document.querySelector('.buttonMagique');
-let pButton = document.querySelector('.pButtonMagique');
-pButton.style.color="white";
+    let inputPseudo = document.querySelectorAll('#pseudoU');
+    let inputPassword = document.querySelectorAll('#passwordU');
 
-function buttonHelp(){
-    button = alert('Pseudo : gg  Mot de Passe : 123 ');
-}
+    function addSession(){
+        if((inputPseudo =! " ")&&(inputPassword =! " ")){
+        } else {
+            alert('Votre session à bien été enregistrer');
+        }
+    }
 </script>
 </html>

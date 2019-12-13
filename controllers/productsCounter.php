@@ -1,4 +1,5 @@
 <?php
+// Contrôlleur pour le compteur de produit créer en BDD
 function productsCounter(){
     $user = 'root';
     $pass = '0000';

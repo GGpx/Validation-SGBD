@@ -1,3 +1,4 @@
+<!--Vue de la modification d'un produit en BDD-->
 <?php
 include_once '../controllers/login/sessionStart.php';
 ?>
@@ -20,7 +21,7 @@ include_once '../controllers/login/sessionStart.php';
     ?>
     <div class="jumbotron jumbotron-fluid">
         <div class="container">
-            <h1 class="display-4">Modification d'un produit</h1>
+            <h2 class="display-4">Modification de produits</h2>
         </div>
     </div>
     <table>

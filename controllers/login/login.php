@@ -1,4 +1,5 @@
 <?php
+// FICHIER QUI EST PERMET DE VéRIFIER LA PRéSENCE DE L'UTILISATEUR DANS LA BDD (au moment de l'authentification à l'application)
 session_start();
 include_once 'connexionUsers.php';
 

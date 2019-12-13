@@ -1,4 +1,5 @@
 <?php
+// Contrôlleur pour la suppression d'un produit en BDD
 $id = $_POST['id'];
 
 //DELETE AN PRODUCT

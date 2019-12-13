@@ -1,4 +1,5 @@
 <?php
+// Contrôlleur pour la création d'un produit en BDD
 $user = 'root';
 $pass = '0000';
 $bdd = new PDO('mysql:host=localhost;dbname=products;charset=utf8', $user, $pass);

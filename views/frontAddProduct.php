@@ -1,3 +1,4 @@
+<!--Vue de l'ajout d'un produit en BDD-->
 <?php
 include_once '../controllers/login/sessionStart.php';
 ?>
@@ -14,7 +15,7 @@ include_once '../controllers/login/sessionStart.php';
     <title>Les Produits</title>
 </head>
 <body>
-<main style="height: 100vh">
+<main style="height: 100vh;">
     <?php
     include_once 'navBarBoostrap.php';
     ?>
@@ -24,7 +25,7 @@ include_once '../controllers/login/sessionStart.php';
 <br>
 <div class="jumbotron jumbotron-fluid">
     <div class="container">
-        <h2 class="display-4">Ajout d'un nouveau produit</h2>
+        <h2 class="display-4">Ajout de nouveau produit</h2>
     </div>
 </div>
 <br>
@@ -43,7 +44,7 @@ include_once '../controllers/login/sessionStart.php';
             <label for="description">Description du produit</label>
             <input type="text" name="descriptionP" class="form-control" id="description">
         </div>
-        <button type="submit" class="btn btn-primary btn-lg btn-block">Enregistrez</button>
+        <button type="submit" class="btn btn-dark btn-lg btn-block">Enregistrez</button>
     </form>
 </div>
 

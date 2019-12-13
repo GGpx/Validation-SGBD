@@ -1,4 +1,5 @@
 <?php
+//FONCTION QUI PERMET DE RéCUPéRER LES UTILISATEURS PRéSENTS DANS LA BASE DE DONNéE
 function resultUsers(){
     $user = 'root';
     $pass = '0000';

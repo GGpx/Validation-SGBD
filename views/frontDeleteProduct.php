@@ -1,6 +1,6 @@
-<!--Vue de la connexion à l'application web-->
+<!--Vue de la suppression d'un produit en BDD-->
 <?php
-    include 'controllers/login/sessionStart.php';
+include_once '../controllers/login/sessionStart.php';
 ?>
 <!doctype html>
 <html lang="fr">
@@ -11,33 +11,47 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
           integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="../style.css">
     <title>Les Produits</title>
 </head>
 <body>
 <main style="height: 100vh">
+    <?php
+    include_once 'navBarBoostrap.php';
+    ?>
     <div class="jumbotron jumbotron-fluid">
         <div class="container">
-            <h1 class="display-4">Bienvenue !!</h1>
+            <h2 class="display-4">Suppression de produits</h2>
         </div>
     </div>
-    <div class="connexion">
-        <form action="controllers/login/login.php" method="POST">
-            <div class="form-group">
-                <label for="pseudoU">Pseudo :</label>
-                <input type="text" name="pseudoU" class="form-control">
+    <table>
+        <tr>
+            <th>Nom du produit</th>
+            <th>Date de production</th>
+            <th>Description du produit</th>
+            <th>Suppression</th>
+        </tr>
+        <?php
+        include_once '../controllers/readProduct.php';
+        foreach ($allProducts as $key => $allProduct) {
+            ?>
+            <div id="button">
+                <tr>
+                    <td><?php echo $allProduct['nameP'] ?></td>
+                    <td><?php echo $allProduct['dateP'] ?></td>
+                    <td><?php echo $allProduct['descriptionP'] ?></td>
+                    <td>
+                        <form action="../controllers/deleteProduct.php" method="POST">
+                            <input type="hidden" name="id" value=<?php echo $allProduct['id'] ?>>
+                            <input type="submit" value="Supprimer">
+                        </form>
+                    </td>
+                </tr>
             </div>
-            <div class="form-group">
-                <label for="passwordU">Mot de passe :</label>
-                <input type="password" name="passwordU" class="form-control">
-            </div>
-            <button type="submit" class="btn btn-dark btn-lg btn-block">Connexion</button>
-        </form>
-        <form action="views/createSession.php">
-            <button type="submit" class="btn btn-dark btn-lg btn-block">Inscription</button>
-        </form>
-    </div>
-    <a href="#" class="buttonMagique" onclick="buttonHelp()"><p class='pButtonMagique'>CLIQUE ICI !!</p></a>
+            <?php
+        }
+        ?>
+    </table>
 </main>
 </body>
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
@@ -49,13 +63,4 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
         crossorigin="anonymous"></script>
-<script>
-let button = document.querySelector('.buttonMagique');
-let pButton = document.querySelector('.pButtonMagique');
-pButton.style.color="white";
-
-function buttonHelp(){
-    button = alert('Pseudo : gg  Mot de Passe : 123 ');
-}
-</script>
 </html>

@@ -1,6 +1,5 @@
 <?php
-
-//READ ALL NAMES-PRODUCTS
+// Contrôlleur pour la lecture des produits en BDD
 function getAllProducts(){
     $user = 'root';
     $pass = '0000';

@@ -1,3 +1,4 @@
+<!--Vue de l'affichage de tous les produits en BDD-->
 <?php
 include_once '../controllers/login/sessionStart.php';
 ?>
@@ -40,7 +41,6 @@ include_once '../controllers/login/sessionStart.php';
             <th>Nom du produit</th>
             <th>Date de production</th>
             <th>Description du produit</th>
-            <th>Suppression</th>
         </tr>
         <?php
         include_once '../controllers/readProduct.php';
@@ -51,12 +51,6 @@ include_once '../controllers/login/sessionStart.php';
                     <td><?php echo $allProduct['nameP'] ?></td>
                     <td><?php echo $allProduct['dateP'] ?></td>
                     <td><?php echo $allProduct['descriptionP'] ?></td>
-                    <td>
-                        <form action="../controllers/deleteProduct.php" method="POST">
-                            <input type="hidden" name="id" value=<?php echo $allProduct['id'] ?>>
-                            <input type="submit" value="Supprimer">
-                        </form>
-                    </td>
                 </tr>
             </div>
             <?php

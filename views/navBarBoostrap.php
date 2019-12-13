@@ -1,18 +1,22 @@
+<!--Barre de Navigation-->
 <?php
 echo '  
 <nav> 
     <ul class="nav nav-pills">
         <li class="nav-item">
-            <a class="btn btn-primary" href="frontProducts.php">Les produits</a>
+            <a class="btn btn-dark" href="frontProducts.php">Les produits</a>
         </li>
         <li class="nav-item">
-            <a class="btn btn-primary" href="frontAddProduct.php">Ajout</a>
+            <a class="btn btn-light" href="frontAddProduct.php">Ajouts</a>
         </li>
         <li class="nav-item">
-            <a class="btn btn-primary" href="frontUpdateProduct.php">Modification</a>
+            <a class="btn btn-light" href="frontUpdateProduct.php">Modification</a>
         </li>
-        <li style="float: right" class="nav-item">
-            <a class="btn btn-primary" href="../controllers/login/logout.php">Déconnexion</a>
+        <li class="nav-item">
+            <a class="btn btn-light" href="frontDeleteProduct.php">Suppression</a>
+        </li>
+        <li class="nav-item">
+            <a class="btn btn-danger" href="../controllers/login/logout.php">Déconnexion</a>
         </li>
     </ul>
 </nav>';
