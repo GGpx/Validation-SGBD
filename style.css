@@ -21,6 +21,24 @@ main {
     align-content: center;
 }
 
+nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: flex-end;
+    align-content: center;
+    width: 99vw;
+}
+
+.nav-item{
+   margin: 1%;
+}
+
+.nav-pills{
+    width: 100vw;
+}
+
 .formulaire, .connexion {
     display: flex;
     justify-content: center;

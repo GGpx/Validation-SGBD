@@ -14,13 +14,13 @@ include_once '../controllers/login/sessionStart.php';
     <title>Les Produits</title>
 </head>
 <body>
-<main>
-    <div id="buttonLogout">
-        <a href="../controllers/login/logout.php">Déconnexion</a>
-    </div>
+<main style="height: 100vh">
+    <?php
+    include_once 'navBarBoostrap.php';
+    ?>
     <div class="jumbotron jumbotron-fluid">
         <div class="container">
-            <h2 class="display-4">Tableau des différents produits</h2>
+            <h2 class="display-4">Tableau des produits</h2>
         </div>
     </div>
 
@@ -40,7 +40,6 @@ include_once '../controllers/login/sessionStart.php';
             <th>Nom du produit</th>
             <th>Date de production</th>
             <th>Description du produit</th>
-            <th>Modification</th>
             <th>Suppression</th>
         </tr>
         <?php
@@ -53,12 +52,6 @@ include_once '../controllers/login/sessionStart.php';
                     <td><?php echo $allProduct['dateP'] ?></td>
                     <td><?php echo $allProduct['descriptionP'] ?></td>
                     <td>
-                        <form action="frontUpdateProduct.php">
-                            <input type="hidden" name="id" value=<?php echo $allProduct['id'] ?>>
-                            <input type="submit" value="Modification" >
-                        </form>
-                    </td>
-                    <td>
                         <form action="../controllers/deleteProduct.php" method="POST">
                             <input type="hidden" name="id" value=<?php echo $allProduct['id'] ?>>
                             <input type="submit" value="Supprimer">
@@ -70,33 +63,6 @@ include_once '../controllers/login/sessionStart.php';
         }
         ?>
     </table>
-    <br>
-    <br>
-    <br>
-    <div class="jumbotron jumbotron-fluid">
-        <div class="container">
-            <h2 class="display-4">Pour ajouter des nouveaux produits</h2>
-        </div>
-    </div>
-    <br>
-    <br>
-    <div class="formulaire">
-        <form action="../controllers/createProduct.php" method="POST">
-            <div class="form-group">
-                <label for="name">Nom du produit</label>
-                <input type="text" name="nameP" class="form-control" id="name">
-            </div>
-            <div class="form-group">
-                <label for="date">Date de production</label>
-                <input type="date" name="dateP" class="form-control" id="date">
-            </div>
-            <div class="form-group">
-                <label for="description">Description du produit</label>
-                <input type="text" name="descriptionP" class="form-control" id="description">
-            </div>
-            <button type="submit" class="btn btn-primary">Enregistrez</button>
-        </form>
-    </div>
 </main>
 </body>
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"

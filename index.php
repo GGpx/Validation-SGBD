@@ -23,17 +23,17 @@
     <div class="connexion">
         <form action="controllers/login/login.php" method="POST">
             <div class="form-group">
-                <label for="pseudoU">Pseudo/Email :</label>
+                <label for="pseudoU">Pseudo :</label>
                 <input type="text" name="pseudoU" class="form-control">
             </div>
             <div class="form-group">
                 <label for="passwordU">Mot de passe :</label>
                 <input type="password" name="passwordU" class="form-control">
             </div>
-            <button type="submit" class="btn btn-primary">Connexion</button>
+            <button type="submit" class="btn btn-primary btn-lg btn-block">Connexion</button>
         </form>
     </div>
-    <a href="#" class="buttonMagique" onclick="buttonHelp()"><p class='pButtonMagique'>CLIQUE ICI !! (John)</p></a>
+    <a href="#" class="buttonMagique" onclick="buttonHelp()"><p class='pButtonMagique'>CLIQUE ICI !!</p></a>
 </main>
 </body>
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"

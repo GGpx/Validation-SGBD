@@ -1,3 +1,6 @@
+<?php
+include_once '../controllers/login/sessionStart.php';
+?>
 <!doctype html>
 <html lang="fr">
 <head>
@@ -11,10 +14,13 @@
     <title>Les Produits</title>
 </head>
 <body>
-<main>
+<main style="height: 100vh">
+    <?php
+    include_once 'navBarBoostrap.php';
+    ?>
     <div class="jumbotron jumbotron-fluid">
         <div class="container">
-            <h1 class="display-4">Modification du produit</h1>
+            <h1 class="display-4">Modification d'un produit</h1>
         </div>
     </div>
     <table>
@@ -23,7 +29,6 @@
             <th>Date de production</th>
             <th>Description du produit</th>
             <th>Modification</th>
-            <th>Suppression</th>
         </tr>
         <?php
         include_once '../controllers/readProduct.php';
