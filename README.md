@@ -14,6 +14,8 @@ Pour lancer le projet:<br>
 - Prendre le dossier "Validation-SGBD-master" et le mettre dans un environnement sous AMP (Apache2, MySql, PHP);
 
 Pour lancer la BDD:<br>
+- Pseudo = root
+- MDP = 0000
 - Prendre le fichier products.sql à l'intérieur du dossier "Validation-SGBD-master", et l'importer dans une BDD, afin de récupérer les tables du projet.
 ***
 #### **_Utilisation de l'application web :_**
